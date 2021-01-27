@@ -25,7 +25,6 @@ pipeline {
   		steps{
   			echo 'Package Sysfoo'
   			sh 'mvn package -DskipTests'
-  			archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false
   		}
   	}
   
