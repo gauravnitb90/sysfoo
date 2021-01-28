@@ -29,6 +29,7 @@ pipeline {
 
     stage('package') {
       when {
+              beforeAgent true
               branch 'master'
             }
       agent {
@@ -46,6 +47,7 @@ pipeline {
 
     stage('Docker BP') {
       when {
+              beforeAgent true
               branch 'master'
             }
       steps {
